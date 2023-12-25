@@ -16,13 +16,13 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="#">
               О сервисе
             </a>
           </li>
-          <li class="main-nav__item site-list__item--current">
+          <li class="main-nav__item--current">
             <a href="#">
               Направления
             </a>
@@ -40,7 +40,6 @@
       <a class="user-list__mail" href="mailto:mail@htmlacademy.ru"></a>
       <p><a class="user-list__login" href="login.html">Авторизация</a></p>
     </div>
-
   </header>
 
   <section class="profile">
@@ -64,10 +63,10 @@
 
     <div class="profile__transport">
       <p class="profile__heading">Транспорт</p>
-      <img class="type-of-transport__plane--active">
-      <img class="type-of-transport__car--active">
-      <img class="type-of-transport__bike">
-      <img class="type-of-transport__feet--active">
+      <img class="type-of-transport type-of-transport--plane type-of-transport--active">
+      <img class="type-of-transport type-of-transport--car type-of-transport--active">
+      <img class="type-of-transport type-of-transport--bike">
+      <img class="type-of-transport type-of-transport--feet type-of-transport--active">
     </div>
 
   </section>
@@ -79,13 +78,19 @@
         <li class="plans__item">
           <p class="plans__country">Франция, Италия</p>
           <p class="plans__people">3 попутчика</p>
-          <p class="plans__date">26 мар — 29 мар</p>
+          <p class="plans__date">
+            <span>26 мар</span>
+            <span>29 мар</span>
+          </p>
           <a class="plans__buttom">изменить</a>
         </li>
         <li class="plans__item">
           <p class="plans__country">Таиланд, Индонезия</p>
           <p class="plans__people">1 попутчик</p>
-          <p class="plans__date">1 июл — 15 июл</p>
+          <p class="plans__date">
+            <span>1 июл</span>
+            <span>15 июл</span>
+          </p>
           <a class="plans__buttom">изменить</a>
         </li>
       </ol>
@@ -95,17 +100,18 @@
   <section class="new-plan">
     <div class="wrapper">
       <h2 class="form-heading">Добавить план:</h2>
+      <form action="#" method="get" class="new-plan__form">
+        <div class="form__steps">
+          <div class="form__header">
+            <h3 class="form__heading">
+              Шаг 1. <br />Даты пребывания
+            </h3>
+            <p class="form__text">Укажите предпочтительное количество попутчиков,
+              которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.
+            </p>
+          </div>
 
-      <ul class="new-plan__steps">
-
-        <li class="new-plan__item">
-          <h3 class="new-plan__heading">
-            Шаг 1. <br />Даты пребывания
-          </h3>
-          <p class="new-plan__text">Укажите предпочтительное количество попутчиков,
-            которых вы хотели бы позвать в поездку, и ее предполагаемую длительность.
-          </p>
-          <form action="#" method="get" class="new-plan__form">
+          <div class="form__content">
             <fieldset>
               <p>чел.</p>
               <label for="companions">ищу попутчиков:</label>
@@ -193,19 +199,23 @@
                   </tbody>
               </table>
             </fieldset>
-          </form>
-          <a class="next-step-buttom">Следующий шаг</a>
-        </li>
+          </div>
 
+          <div class="form__footer">
+            <a class="next-step-buttom">Следующий шаг</a>
+          </div>
 
-        <li class="new-plan__item">
-          <h3 class="new-plan__heading">
-            Шаг 2. <br />Маршрут
-          </h3>
-          <p class="new-plan__text">Укажите страны, которые вы хотели бы посетить.
-            Это может быть одна или сразу несколько.
-          </p>
-          <form action="#" method="get" class="new-plan__form">
+        </div>
+        <div class="form__steps">
+          <div class="form__header">
+            <h3 class="new-plan__heading">
+              Шаг 2. <br />Маршрут
+            </h3>
+            <p class="new-plan__text">Укажите страны, которые вы хотели бы посетить.
+              Это может быть одна или сразу несколько.
+            </p>
+          </div>
+          <div class="form__content">
             <fieldset>
 
               <div class="new-plan__country">
@@ -233,33 +243,42 @@
               <button class="add-country">Добавить страну</button>
 
             </fieldset>
-          </form>
-          <a class="next-step-buttom">Следующий шаг</a>
-          <a class="previous-step-buttom">на шаг назад</a>
-        </li>
 
-
-        <li class="new-plan__item">
-          <h3 class="new-plan__heading">
-            Шаг 3. <br />Развлечения
-          </h3>
-          <p class="new-plan__text">Наконец, расскажите о своих планах времяпровождения.
-            Можно писать в свободной форме и ставить тэги.
-          </p>
-
-          <label for="plans">Босния и Герцеговина</label>
-          <img class="new-plan__country--bosnia_and_herzegovina" alt="Флаг Боснии и герцеговины">
-          <textarea id="plans" placeholder="План действий">
+          </div>
+          <div class="form__footer">
+            <a class="next-step-buttom">Следующий шаг</a>
+            <a class="previous-step-buttom">на шаг назад</a>
+          </div>
+        </div>
+        <div class="form__steps">
+          <div class="form__header">
+            <h3 class="new-plan__heading">
+              Шаг 3. <br />Развлечения
+            </h3>
+            <p class="new-plan__text">Наконец, расскажите о своих планах времяпровождения.
+              Можно писать в свободной форме и ставить тэги.
+            </p>
+          </div>
+          <div class="form__content">
+            <label for="plans">Босния и Герцеговина</label>
+            <img class="new-plan__country--bosnia_and_herzegovina" alt="Флаг Боснии и герцеговины">
+            <textarea id="plans" placeholder="План действий">
           </textarea>
-          <label for="czech-plans">Чехия</label>
-          <img class="new-plan__country--czech" alt="Флаг Чехии">
-          <textarea id="czech-plans" placeholder="Пить пиво и лазить по старым замкам,
+            <label for="czech-plans">Чехия</label>
+            <img class="new-plan__country--czech" alt="Флаг Чехии">
+            <textarea id="czech-plans" placeholder="Пить пиво и лазить по старым замкам,
           наслаждаться архитектурой и вот это все.">
           </textarea>
-          <a class="next-step-buttom">Следующий шаг</a>
-          <a class="previous-step-buttom">на шаг назад</a>
-        </li>
-      </ul>
+          </div>
+          <div class="form__footer">
+            <a class="next-step-buttom">Следующий шаг</a>
+            <a class="previous-step-buttom">на шаг назад</a>
+          </div>
+        </div>
+
+
+
+      </form>
     </div>
   </section>
 

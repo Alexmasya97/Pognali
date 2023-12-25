@@ -17,8 +17,8 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="main-nav__item site-list__item--current">
+        <ul class="main-nav__list">
+          <li class="main-nav__item--current">
             <a href="#">
               О сервисе
             </a>
@@ -41,17 +41,16 @@
       <a class="user-list__mail" href="mailto:mail@htmlacademy.ru"></a>
       <p><a class="user-list__login" href="login.html">Авторизация</a></p>
     </div>
-
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Сервис поиска попутчиков "Погнали?" </h1>
     <section class="promo">
-      <h2>Как путешествовать вместе</h2>
+      <h2 class="visually-hidden">Как путешествовать вместе</h2>
       <div class="promo__wrapper">
-        <p>В путешествие с крутыми попутчиками!</p>
+        <p class="promo__heading">В путешествие с крутыми попутчиками!</p>
         <div>
-          <blockquote> «Лучшее приложение, что я видел в жизни!» </blockquote>
-          <cite>Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+          <blockquote class="promo__quote"> «Лучшее приложение, что я видел в жизни!» </blockquote>
+          <cite class="promo__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
         </div>
         <ol class="promo-list">
           <li class="promo-list__item">Выберите направление</li>
@@ -80,23 +79,23 @@
         </p>
         <ul class="directions-list">
           <li class="directions-list__item">
-            <p class="directions-list__item_heading">Таиланд</p>
-            <p class="directions-list__item_text">Джунгли зовут!</p>
-            <p class="directions-list__item_people">18321</p>
+            <p class="directions-list__heading">Таиланд</p>
+            <p class="directions-list__text">Джунгли зовут!</p>
+            <p class="directions-list__people">18321</p>
             <img src="../SRC/image/mobila/mobila-Thai.png">
           </li>
 
           <li class="directions-list__item">
-            <p class="directions-list__item_heading">Франция</p>
-            <p class="directions-list__item_text">Трэ бьен, манифик!</p>
-            <p class="directions-list__item_people">12518</p>
+            <p class="directions-list__heading">Франция</p>
+            <p class="directions-list__text">Трэ бьен, манифик!</p>
+            <p class="directions-list__people">12518</p>
             <img src="../SRC/image/mobila/mobila-France.png">
           </li>
 
           <li class="directions-list__item">
-            <p class="directions-list__item_heading">Чехия</p>
-            <p class="directions-list__item_text">Закоулки старой Европы</p>
-            <p class="directions-list__item_people">5326</p>
+            <p class="directions-list__heading">Чехия</p>
+            <p class="directions-list__text">Закоулки старой Европы</p>
+            <p class="directions-list__people">5326</p>
             <img src="../SRC/image/mobila/mobila-Czech.png">
           </li>
         </ul>
@@ -135,10 +134,10 @@
               <span>#смузи</span>
             </p>
             <div class="type-of-transport">
-              <img class="type-of-transport__plane--active">
-              <img class="type-of-transport__car">
-              <img class="type-of-transport__bike">
-              <img class="type-of-transport__feet">
+              <img class="type-of-transport type-of-transport--plane type-of-transport--active">
+              <img class="type-of-transport type-of-transport--car">
+              <img class="type-of-transport type-of-transport--bike">
+              <img class="type-of-transport type-of-transport--feet">
             </div>
           </li>
 
@@ -161,10 +160,10 @@
               <span>#крафт</span>
             </p>
             <div>
-              <img class="type-of-transport__plane--active">
-              <img class="type-of-transport__car--active">
-              <img class="type-of-transport__bike">
-              <img class="type-of-transport__feet--active">
+              <img class="type-of-transport type-of-transport--plane type-of-transport--active">
+              <img class="type-of-transport type-of-transport--car type-of-transport--active">
+              <img class="type-of-transport type-of-transport--bike">
+              <img class="type-of-transport type-of-transport--feet type-of-transport--active">
             </div>
           </li>
 
@@ -196,11 +195,11 @@
             </tr>
           </table>
         </div>
-
+        <button class="tariffs-premium__open-button" type="button">
+          Показать тарифы для бизнеса
+        </button>
+        <button class="tariffs-premium__close-button">Закрыть окно</button>
         <div class="tariffs-premium">
-          <button class="tariffs-premium__open-button" type="button">
-            Показать тарифы для бизнеса
-          </button>
           <h3 class="heading">Бизнес-тарифы</h3>
           <table>
             <tr>
@@ -221,12 +220,10 @@
             </tr>
           </table>
         </div>
-        <button class="tariffs-premium__close-button">Закрыть окно</button>
       </div>
-
     </section>
-    <section class="login">
-      <h2 class="visually-hidden"> Авторизация</h2>
+    <section class="authorization">
+      <h2 class="visually-hidden">Авторизация</h2>
       <h3 class="heading">Заинтересовались?</h3>
       <p class="title"> Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы?
         Тогда скорее <a>авторизуйтесь</a>.
