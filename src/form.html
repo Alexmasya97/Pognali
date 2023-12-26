@@ -101,7 +101,7 @@
     <div class="wrapper">
       <h2 class="form-heading">Добавить план:</h2>
       <form action="#" method="get" class="new-plan__form">
-        <div class="form__steps">
+        <div class="form__steps step-1">
           <div class="form__header">
             <h3 class="form__heading">
               Шаг 1. <br />Даты пребывания
@@ -111,25 +111,27 @@
             </p>
           </div>
 
-          <div class="form__content">
+          <div class="form__sorting">
             <fieldset>
               <p>чел.</p>
               <label for="companions">ищу попутчиков:</label>
-              <button type="button" class></button>
+              <button type="button" class="btn btn--minus"></button>
               <input type="number" step="1" min="0" max="99" placeholder="2" id="companions">
-              <button type="button"></button>
+              <button type="button" class="btn btn--plus"></button>
 
               <p>чел.</p>
               <label for="days">дн.</label>
-              <button type="button"></button>
+              <button type="button" class="btn btn--minus"></button>
               <input type="number" step="1" min="1" max="99" placeholder="3" name="days" id="days">
-              <button type="button"></button>
+              <button type="button" class="btn btn--plus"></button>
 
               <label for="kids">Можно с детьми</label>
               <input type="checkbox" checked id="kids" name="kids">
 
               <table class="calendar">
+                <button type="button" class="btn btn--previous"></button>
                 <caption class="calendar__month">Март 2019</caption>
+                <button type="button" class="btn btn--next"></button>
                 <thead class="calendar__head">
                   <tr class="calendar__row">
                     <th>П</th>
@@ -206,16 +208,16 @@
           </div>
 
         </div>
-        <div class="form__steps">
+        <div class="form__steps step-2">
           <div class="form__header">
-            <h3 class="new-plan__heading">
+            <h3 class="form__heading">
               Шаг 2. <br />Маршрут
             </h3>
-            <p class="new-plan__text">Укажите страны, которые вы хотели бы посетить.
+            <p class="form__text">Укажите страны, которые вы хотели бы посетить.
               Это может быть одна или сразу несколько.
             </p>
           </div>
-          <div class="form__content">
+          <div class="form__sorting">
             <fieldset>
 
               <div class="new-plan__country">
@@ -250,16 +252,16 @@
             <a class="previous-step-buttom">на шаг назад</a>
           </div>
         </div>
-        <div class="form__steps">
+        <div class="form__steps step-3">
           <div class="form__header">
-            <h3 class="new-plan__heading">
+            <h3 class="form__heading">
               Шаг 3. <br />Развлечения
             </h3>
-            <p class="new-plan__text">Наконец, расскажите о своих планах времяпровождения.
+            <p class="form__text">Наконец, расскажите о своих планах времяпровождения.
               Можно писать в свободной форме и ставить тэги.
             </p>
           </div>
-          <div class="form__content">
+          <div class="form__sorting">
             <label for="plans">Босния и Герцеговина</label>
             <img class="new-plan__country--bosnia_and_herzegovina" alt="Флаг Боснии и герцеговины">
             <textarea id="plans" placeholder="План действий">
@@ -275,9 +277,6 @@
             <a class="previous-step-buttom">на шаг назад</a>
           </div>
         </div>
-
-
-
       </form>
     </div>
   </section>
